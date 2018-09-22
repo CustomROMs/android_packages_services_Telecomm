@@ -1643,14 +1643,7 @@ public class CallAudioRouteStateMachine extends StateMachine {
     }
 
     private boolean checkForEarpieceSupport() {
-        AudioDeviceInfo[] deviceList = mAudioManager.getDevices(AudioManager.GET_DEVICES_OUTPUTS);
-        for (AudioDeviceInfo device: deviceList) {
-            if (device.getType() == AudioDeviceInfo.TYPE_BUILTIN_EARPIECE) {
-                return true;
-            }
-        }
-        // No earpiece found
-        return false;
+        return true;
     }
 
     private int calculateBaselineRouteMessage(boolean isExplicitUserRequest,
